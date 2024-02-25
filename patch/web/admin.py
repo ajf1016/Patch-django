@@ -1,3 +1,4 @@
 from django.contrib import admin
+from web.models import Testimonials
 
-# Register your models here.
+admin.site.register(Testimonials)
