@@ -2,7 +2,7 @@ $(document).ready(function () {
     $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 0,
-        items: 1,
+        items: 2,
     });
 
     $("#faq .tab_head a").on("click", function () {

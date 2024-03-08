@@ -7,4 +7,4 @@ class Testimonials(models.Model):
     designation = models.CharField(max_length=255)
     
     def __str__(self):
-        return self.name
+        return self.designation
