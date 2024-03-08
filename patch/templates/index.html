@@ -153,33 +153,16 @@
         </section>
         <section id="testimonial">
             <div class="container owl-carousel owl-theme">
+                {% for testimonial in testimonials%}
                 <div class="item">
                     <p>
-                        "Patch is one of the best ways to improve your credit
-                        history and it's completely free."
+                        "{{testimonial.description}}"
                     </p>
                     <img src="{% static 'images/testimonial-1.jpg' %}" alt="Jeremy B" />
-                    <h6 class="name">Jeremy B</h6>
-                    <span class="address">Bath, BA2</span>
+                    <h6 class="name">{{testimonial.name}}</h6>
+                    <span class="address">{{testimonial.designation}}</span>
                 </div>
-                <div class="item">
-                    <p>
-                        "Patch is one of the best ways to improve your credit
-                        history and it's completely free."
-                    </p>
-                    <img src="{% static 'images/testimonial-1.jpg' %}" alt="Jeremy B" />
-                    <h6 class="name">Dwayne</h6>
-                    <span class="address">Bath, BA2</span>
-                </div>
-                <div class="item">
-                    <p>
-                        "Patch is one of the best ways to improve your credit
-                        history and it's completely free."
-                    </p>
-                    <img src="{% static 'images/testimonial-1.jpg' %}" alt="Jeremy B" />
-                    <h6 class="name">Joe</h6>
-                    <span class="address">Bath, BA2</span>
-                </div>
+                {% endfor %}
             </div>
             <hr class="line" />
         </section>
