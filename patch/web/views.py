@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from web.models import Testimonial
 
 def index(request):
-    return render(request,"index.html")
+    testimonial = Testimonial.objects.all()
+    context = {
+        'testimonial': testimonial
+    }
+    return render(request,"index.html",context=context)
