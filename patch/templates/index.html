@@ -4,9 +4,16 @@
         {% load static %}
         <meta charset="UTF-8" />
         <title>We Can Pay Your Landlord Deposit | Patch</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+        <link
+            rel="stylesheet"
+            href="{% static 'css/style.css' %}"
+            type="text/css"
+        />
         <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}" />
+        <link
+            rel="stylesheet"
+            href="{% static 'css/owl.theme.default.css' %}"
+        />
 
         <link
             rel="icon"
@@ -24,7 +31,11 @@
         <header>
             <section class="header-wrapper">
                 <div class="left">
-                    <h1><a href="#"><img src="{% static 'images/logo.png' %}" alt=""></a></h1>
+                    <h1>
+                        <a href="#"
+                            ><img src="{% static 'images/logo.png' %}" alt=""
+                        /></a>
+                    </h1>
                     <ul>
                         <li><a href="">For Renters</a></li>
                         <li><a href="">Search Properties</a></li>
@@ -43,9 +54,17 @@
             <section class="wrapper">
                 <section class="container">
                     <h1>Welcome to modern renting with Patch</h1>
-                    <p>Improve your Credit History. Rent your Deposit. Find your Perfect Pad.</p>
+                    <p>
+                        Improve your Credit History. Rent your Deposit. Find
+                        your Perfect Pad.
+                    </p>
                     <a href="#" class="button">Join Patch</a>
-                    <div>Built for you in partnership with<img src="{% static 'images/experian.svg' %}" alt="experian"></div>
+                    <div>
+                        Built for you in partnership with<img
+                            src="{% static 'images/experian.svg' %}"
+                            alt="experian"
+                        />
+                    </div>
                 </section>
             </section>
         </section>
@@ -155,10 +174,11 @@
             <div class="container owl-carousel owl-theme">
                 {% for testimonial in testimonials%}
                 <div class="item">
-                    <p>
-                        "{{testimonial.description}}"
-                    </p>
-                    <img src="{% static 'images/testimonial-1.jpg' %}" alt="Jeremy B" />
+                    <p>"{{testimonial.description}}"</p>
+                    <img
+                        src="{% static 'images/testimonial-1.jpg' %}"
+                        alt="Jeremy B"
+                    />
                     <h6 class="name">{{testimonial.name}}</h6>
                     <span class="address">{{testimonial.designation}}</span>
                 </div>
@@ -384,55 +404,16 @@
                 </div>
                 <div class="right">
                     <ul>
+                        {% for promoter in promoters%}
                         <li>
                             <img
-                                src="{% static 'images/index-faq-press-1.jpg' %}"
+                                src="{{promoter.image.url}}"
                                 alt="index-faq-press-1"
                             />
-                            <span>The Daily Mail</span>
+                             <!-- it will also work with {{promoter.image.url}} -->
+                            <span>{{promoter.name}}</span>
                         </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-2.jpg' %}"
-                                alt="index-faq-press-2"
-                            />
-                            <span>The Next Web</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-3.jpg' %}"
-                                alt="index-faq-press-3"
-                            />
-                            <span>Reuters</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-3.jpg' %}"
-                                alt="index-faq-press-3"
-                            />
-                            <span>Reuters</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-3.jpg' %}"
-                                alt="index-faq-press-3"
-                            />
-                            <span>Reuters</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-4.jpg' %}"
-                                alt="index-faq-press-4"
-                            />
-                            <span>London Evening Standard</span>
-                        </li>
-                        <li>
-                            <img
-                                src="{% static 'images/index-faq-press-5.jpg' %}"
-                                alt="index-faq-press-5"
-                            />
-                            <span>Forbes</span>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </section>
@@ -446,21 +427,33 @@
                 <section class="bottom">
                     <ul>
                         <li>
-                            <img src="{% static 'images/check.svg' %}" alt="Check" />
+                            <img
+                                src="{% static 'images/check.svg' %}"
+                                alt="Check"
+                            />
                             <small>Tracking your rent is 100% free</small>
                         </li>
                         <li>
-                            <img src="{% static 'images/check.svg' %}" alt="Check" />
+                            <img
+                                src="{% static 'images/check.svg' %}"
+                                alt="Check"
+                            />
                             <small>Build your Experian Credit History</small>
                         </li>
                         <li>
-                            <img src="{% static 'images/check.svg' %}" alt="Check" />
+                            <img
+                                src="{% static 'images/check.svg' %}"
+                                alt="Check"
+                            />
                             <small
                                 >Benefit from other great Patch services</small
                             >
                         </li>
                         <li>
-                            <img src="{% static 'images/check.svg' %}" alt="Check" />
+                            <img
+                                src="{% static 'images/check.svg' %}"
+                                alt="Check"
+                            />
                             <small>Signing up takes less than 3 minutes</small>
                         </li>
                     </ul>
@@ -473,7 +466,9 @@
                     <div class="item large">
                         <h1>
                             <a href="#"
-                                ><img src="{% static 'images/logo-white.png' %}" alt="Logo"
+                                ><img
+                                    src="{% static 'images/logo-white.png' %}"
+                                    alt="Logo"
                             /></a>
                         </h1>
                         <p>Welcome to modern renting.</p>
@@ -505,7 +500,10 @@
                                 placeholder="Your email address"
                             />
                             <button type="submit">
-                                <img src="{% static 'images/send.svg' %}" alt="" />
+                                <img
+                                    src="{% static 'images/send.svg' %}"
+                                    alt=""
+                                />
                             </button>
                         </form>
                     </div>
@@ -547,7 +545,10 @@
                         properties from your phone.
                     </p>
                     <a href="" class="button">
-                        <img src="{% static 'images/appstore.svg' %}" alt="appstore" />
+                        <img
+                            src="{% static 'images/appstore.svg' %}"
+                            alt="appstore"
+                        />
                         App Store
                     </a>
                 </section>
