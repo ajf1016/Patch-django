@@ -1,1 +1,1 @@
-Patch website clone with django
+Patch website with django
