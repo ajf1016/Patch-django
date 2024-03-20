@@ -1,5 +1,5 @@
 from django.contrib import admin
-from web.models import Testimonial, Promoter
+from web.models import Testimonial, Promoter,Faq
 
 # for showing datas on admin
 class TestimonialAdmin(admin.ModelAdmin):
@@ -12,3 +12,8 @@ class PromoterAdmin(admin.ModelAdmin):
     list_display = ('id', 'name',  'image')
     
 admin.site.register(Promoter, PromoterAdmin)
+
+class FaqAdmin(admin.ModelAdmin):
+    list_display = ('id','title','faq_type','description')
+    
+admin.site.register(Faq, FaqAdmin)

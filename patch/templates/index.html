@@ -224,140 +224,38 @@
                     <section class="tab_body">
                         <div id="first_tab" class="item active">
                             <ul>
+                                {% for item in rent_tracking_faqs %}
                                 <li>
-                                    <h4>What is Rent Tracking?</h4>
+                                    <h4>{{item.title}}</h4>
                                     <p>
-                                        Rent Tracking is a new way of boosting
-                                        your credit history. We track your rent
-                                        payments to your landlord or agent. If
-                                        you pay on time, we report this to the
-                                        credit reference agency Experian and
-                                        they add this information to your credit
-                                        report...
+                                        {{item.description}}
                                     </p>
                                 </li>
-                                <li>
-                                    <h4>How does Rent Tracking work?</h4>
-                                    <p>
-                                        It's very easy. Sign up to Patch Connect
-                                        your bank account Pay your rent Patch
-                                        reports your rent payments to Experian
-                                        Your credit history improves
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>How do I see what you've tracked?</h4>
-                                    <p>
-                                        You'll start receiving the benefit of
-                                        Rent Tracking as soon as you sign up.
-                                        You won't actually be able to view the
-                                        information in your Experian credit
-                                        report until around three months after
-                                        signing up...
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>How much does Rent Tracking cost?</h4>
-                                    <p>
-                                        Our Rent Tracking service is free to
-                                        use.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>
-                                        How does Rent Tracking improve my credit
-                                        history?
-                                    </h4>
-                                    <p>
-                                        Your credit history improves each time a
-                                        new, positive record is added to your
-                                        credit report such as making a payment
-                                        on time. Your rent is a now qualifying
-                                        payment.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>What if I change property?</h4>
-                                    <p>
-                                        Not a problem. It's easy to continue
-                                        Rent Tracking. Log into your Patch
-                                        account after you make your last rent
-                                        payment to your old property and let us
-                                        know about your new place...
-                                    </p>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div id="second_tab" class="item">
                             <ul>
+                                {% for item in new_deposite_faqs %}
                                 <li>
-                                    <h4>How do I see what you've tracked?</h4>
+                                    <h4>{{item.title}}</h4>
                                     <p>
-                                        You'll start receiving the benefit of
-                                        Rent Tracking as soon as you sign up.
-                                        You won't actually be able to view the
-                                        information in your Experian credit
-                                        report until around three months after
-                                        signing up...
+                                        {{item.description}}
                                     </p>
                                 </li>
-                                <li>
-                                    <h4>How much does Rent Tracking cost?</h4>
-                                    <p>
-                                        Our Rent Tracking service is free to
-                                        use.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>
-                                        How does Rent Tracking improve my credit
-                                        history?
-                                    </h4>
-                                    <p>
-                                        Your credit history improves each time a
-                                        new, positive record is added to your
-                                        credit report such as making a payment
-                                        on time. Your rent is a now qualifying
-                                        payment.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h4>What if I change property?</h4>
-                                    <p>
-                                        Not a problem. It's easy to continue
-                                        Rent Tracking. Log into your Patch
-                                        account after you make your last rent
-                                        payment to your old property and let us
-                                        know about your new place...
-                                    </p>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div id="third_tab" class="item">
                             <ul>
+                                {% for item in existing_deposite_faqs %}
                                 <li>
-                                    <h4>
-                                        How does Rent Tracking improve my credit
-                                        history?
-                                    </h4>
+                                    <h4>{{item.title}}</h4>
                                     <p>
-                                        Your credit history improves each time a
-                                        new, positive record is added to your
-                                        credit report such as making a payment
-                                        on time. Your rent is a now qualifying
-                                        payment.
+                                        {{item.description}}
                                     </p>
                                 </li>
-                                <li>
-                                    <h4>What if I change property?</h4>
-                                    <p>
-                                        Not a problem. It's easy to continue
-                                        Rent Tracking. Log into your Patch
-                                        account after you make your last rent
-                                        payment to your old property and let us
-                                        know about your new place...
-                                    </p>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </section>
