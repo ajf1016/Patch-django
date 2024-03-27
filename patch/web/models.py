@@ -31,3 +31,9 @@ class Faq(models.Model):
     
     def __str__(self) -> str:
         return self.title
+    
+class Subscribe(models.Model):
+    email = models.EmailField()
+    
+    def __str__(self) -> str:
+        return self.email

@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from web.models import Testimonial, Promoter, Faq
+from web.models import Testimonial, Promoter, Faq,Subscribe
+from django.http.response import HttpResponse
 
 
 def index(request):
@@ -17,3 +18,11 @@ def index(request):
         'existing_deposite_faqs': existing_deposite_faqs,
     }
     return render(request, "index.html", context=context)
+
+
+def subcribe(request):
+    email = request.POST.get('email')
+    Subscribe.objects.create(
+        email = email,
+    )
+    return HttpResponse(email)
