@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from web.models import Testimonial, Promoter, Faq,Subscribe
+from django.urls import reverse
 from django.http.response import HttpResponse
 
 
@@ -25,4 +26,4 @@ def subcribe(request):
     Subscribe.objects.create(
         email = email,
     )
-    return HttpResponse(email)
+    return redirect(reverse('web:home'))
