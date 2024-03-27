@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render,redirect
 from web.models import Testimonial, Promoter, Faq,Subscribe
 from django.urls import reverse
@@ -23,7 +24,20 @@ def index(request):
 
 def subcribe(request):
     email = request.POST.get('email')
-    Subscribe.objects.create(
-        email = email,
-    )
-    return redirect(reverse('web:home'))
+    if not Subscribe.objects.filter(email = email).exists():
+        Subscribe.objects.create(
+            email = email,
+        )
+        
+        response_data = {
+            "status": "success",
+            "message": "You have successfully subscribed to our newsletter."
+        }
+    else:
+        response_data = {
+            "status": "Success",
+            "message": "You already have a subscription to our newsletter"
+        }
+    
+    # return redirect(reverse('web:home'))
+    return HttpResponse(json.dumps(response_data),content_type="application/json")
